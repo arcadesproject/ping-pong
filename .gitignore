@@ -6,7 +6,8 @@ node_modules/
 # Build files
 dist/
 build/
-.next/
+.vite/
+.cache/
 out/
 
 # Cache
@@ -40,9 +41,6 @@ coverage/
 
 # Optional (for TypeScript)
 *.tsbuildinfo
-
-# Vite
-.vite/
 
 # ESLint
 .eslintcache
