@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Install dependencies
@@ -30,18 +30,23 @@ jobs:
       - name: Build
         run: yarn build
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
+          name: dist
           path: ./dist
 
     # Deploy job
   deploy:
     environment:
-      name: demo
+      name: Github Pages
       url: ${{ steps.deploy_to_pages.outputs.github_pages_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pong-dist
       - name: Deploy to GitHub Pages
         id: deploy_to_pages
         uses: actions/deploy-pages@v2
