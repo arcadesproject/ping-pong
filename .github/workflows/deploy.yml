@@ -16,9 +16,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-
 jobs:
-
   # Build job
   build:
     runs-on: ubuntu-latest
@@ -30,8 +28,6 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build
