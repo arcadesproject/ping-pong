@@ -51,6 +51,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: pong-dist
+
+      - name: Validate Artifact
+        run: |
+            echo "Build contents:"
+            ls -R dist/
+            echo "Total size:"
+            du -sh dist/
       - uses: actions/deploy-pages@v4
         id: deployment
         with:
