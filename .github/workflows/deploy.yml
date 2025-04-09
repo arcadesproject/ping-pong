@@ -52,3 +52,6 @@ jobs:
         with:
           name: pong-dist
       - uses: actions/deploy-pages@v4
+        id: deployment
+        with:
+          artifact-name: pong-dist
