@@ -1,5 +1,7 @@
 # 🏓 React Pong Game
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A classic Pong game built with React, Vite, TypeScript, and Canvas. Features smooth physics, multiplayer controls, and sound effects.
 
 ![Game Screenshot](./screenshot.png) <!-- Add a screenshot later -->
